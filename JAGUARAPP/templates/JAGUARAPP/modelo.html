@@ -16,7 +16,7 @@
                 <div class="card-body" style="text-align: center;">
                     <h7 class="card-title">{{producto.titulo}}</h7>
                     <p class="card-text">{{producto.precio}}&nbsp;$</p>
-                    <button class="navbar-toggler" type="button"><b style="text-align: right;"> <a href="{% url 'Producto'%}">Ver Producto</a></b></button>
+                    <button class="navbar-toggler" type="button"><b style="text-align: right;"> <a href="{% url 'mostrar' producto.id%}">Ver Producto</a></b></button>
                 </div>
             </div>
 

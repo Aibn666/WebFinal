@@ -3,24 +3,72 @@
    {% load static %}
 
     {% block content %}
-            <h1 style="text-align: center"> Carrito </h1>
-                <h2>aca se tiene que ver el carrito</h2>
-        {% if request.session.carro.items %}
-            {% for key, value in request.session.carro.items %}
-                <h2> {{value.titulo}} </h2>
-                <h2> {{value.cantidad}} </h2>
-                <h2> {{value.precio}} </h2>
-                <a href="{% url 'agregar' value.producto_id %}" class="btn btn-sm btn-success">+</a>
-                <a href="{% url 'restar' value.producto_id %}" class="btn btn-sm btn-success">-</a>
-                <a href="{% url 'eliminar' value.producto_id %}" class="btn btn-sm btn-success">eliminar</a>
-                <a href="#" class="btn btn-sm btn-success">Vaciar Carrito</a>
+    <div class="container">
+    <div class="row">
+    <div class="col">  
+    <div class="card" style="width: 100%; margin: 5px">
+        <div style="float: center">
+            <table class="table table_bordered">
+
+                <thead>
+                    <tr>
+
+                        <th colspan="5" class="text-center">Carrito</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if request.session.carro.items %}
+                        {% for key, value in request.session.carro.items %}
+                            <tr class="text-center">
+                            
+                                <td>{{value.titulo}}</td>
+                                <td>{{value.descripcion}}</td>
+                                <td></b>{{value.precio}}</b></td>
+                                <td>{{value.cantidad}}</td>
+                                <td>
+                                    <a href="{% url 'agregar' value.producto_id %}" class="btn btn-sm btn-success">+</a>
+                                    <a href="{% url 'restar' value.producto_id %}" class="btn btn-sm btn-success">-</a>
+
+                                </td>
+                            
+                            </tr>
 
 
-            {% endfor %}
-        {% else %}
-            <p>sin productos</p>
-        {% endif %}
+                        {% endfor %}
 
-        <a href="#" class="btn btn-sm btn-success">finalizar compra</a>
+                    {% else %}
+                        <tr>
+                        
+                            <td colspan="5" class="text-center">
+                                <div class="alert alert-danger text-center">
+                                    Sin productos
+                                </div>
+                            </td>
+
+                        </tr>
+                    
+                    {% endif %}
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5" class="text-center">
+                            <div style="text-align: right;">
+                                <a href="{% url 'Home' %}" class="btn btn-sm btn-success">Home</a>
+                                <a href="#" class="btn btn-sm btn-success">finalizar compra</a>
+                                <a href="#" class="btn btn-sm btn-success">Vaciar Carrito</a>
+                            </div>
+                        </td>
+                    </tr>
+
+                </tfoot>
+
+            </table>
+        </div>
+</div>
+</div>
+</div>  
+</div>  
 
     {% endblock %}
+ 

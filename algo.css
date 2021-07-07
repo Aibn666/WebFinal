@@ -1,0 +1,8 @@
+
+#barra{
+    background-color: cadetblue;
+}
+@media (min-width: 768px)
+.ml-md-3, .mx-md-3 {
+    margin-left: 1rem!important;
+}

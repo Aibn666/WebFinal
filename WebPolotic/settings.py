@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'PRODUCTO',
     'CARRITO',
     'USUARIOS',
+    'pruebas',
 ]
 
 MIDDLEWARE = [

@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang"es">
 
 <head>
 
@@ -15,36 +16,28 @@
 
     <!-- Styles -->
     <link href="{% static 'JAGUARAPP/css/gestion.css' %}" rel="stylesheet">
+    <title>Jaguar Kaa S.a</title>
 </head>
 
 <body>
-<header class="navbar navbar-expand-lg navbar-dark py-lg-4" id="encabezado">
+<header  id="encabezado">
       <!--encabezado-->
-<div class="container">
-        <h1>{{user}}</h1>
-        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="{% url 'Home'%}"> Jaguar Kaa S.A </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <li class="nav-item active px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="{% url 'Login'%}">Acceder</a>
-          </li>
-          <li class="nav-item active px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="{% url 'Logout'%}">Logout</a>
-          </li>
-          <li class="nav-item active px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="{% url 'Registro'%}">Registrarce</a>
-          </li>
-          <li class="nav-item active px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="{% url 'Carrito'%}">Carrito</a>
-          </li>
+<div>
+        <div style="text-align: right;">
+            <button><a href="{% url 'Login'%}">Acceder</a></button>
+            <button><a href="{% url 'Logout'%}">Salir</a></button>
+            <button><a href="{% url 'Registro'%}">Registrarce</a></button>
+            <button><a href="{% url 'Carrito'%}">Carrito</a></button>
+            <h2 style="text-align: left;"><p style="font-family: Lora; color: white">Jaguar</p><h2>
+            <h5><b>{{user}}</b></h5>
         </div>
+        
 </div>
 </header>
 <div><p></p>
 </div>
-
+<div><p></p>
+</div>
  <!-- Navbar -->
  <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
     <div class="container">
@@ -61,11 +54,15 @@
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Info'%}">Informacion</a>
           </li>
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="{% url 'Busqueda'%}">Busqueda</a>
-          </li>
-          <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Contacto'%}">Contacto</a>
           </li>
+          <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="#">Nuevo</a>
+          </li>
+          <div style="text-align: right;">
+            <input type="search" name="Buscar" >
+            <input type="submit" value="Buscar">
+          <div>
         </ul>
       </div>
     </div>
@@ -103,7 +100,7 @@
         	<a href="sample.html" class="link">Aviso legal</a> ·
         	<a href="sample.html" class="link">Cookies</a>
 		</p>
-        <p class="m-0 mbt1">&copy; Productos de Calidad</p>
+        <p class="m-0 mbt1">&copy; Krysiuk, Ivan</p>
       </div>
 	</footer>
 

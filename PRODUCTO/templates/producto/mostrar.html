@@ -3,13 +3,9 @@
    {% load static %}
 
     {% block content %}
-            <h1 style="text-align: center"> Productos </h1>
-                <div class="acciones">
-                  <a href="{% url 'Aumentar' %}">agregar producto</a></div>
-               
-                {% for producto in productos %}
-                  <div class="card" style="width: 45%; margin: 10px; text-align: center">
-                     <img src="{{producto.imagen.url}}" class="card-img-top">
+        <!--<h1>{{producto.titulo}}</h1>-->
+                    <div class="card" style="width: 45%; margin: 10px; text-align: center">
+                        <img src="{{producto.imagen.url}}" class="card-img-top">
                         <div class="card-body" style="text-align: center;">
                         <h7 class="card-title">{{producto.titulo}}</h7>
                         <p class="card-text">{{producto.descripcion}}</p>
@@ -19,7 +15,6 @@
                         <a href="#"><p>{{producto.categoria}}</p></a>
                   </div>
 
-                {% endfor %}
-               
-
     {% endblock %}
+
+ 

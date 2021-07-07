@@ -1,0 +1,15 @@
+  {% extends 'JAGUARAPP/Layout.html' %}
+   
+   {% load static %}
+
+    {% block content %}
+            <div class="acciones">
+                  <a href="{% url 'Producto' %}">volver</a>
+                </div>
+          <form action "{% url 'Aumentar' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="producto">
+            <input type="submit" value="guardar">
+
+          </form> 
+    {% endblock %}

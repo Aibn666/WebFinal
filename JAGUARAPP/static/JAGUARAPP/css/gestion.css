@@ -1,6 +1,6 @@
 body {
   font-family: 'Lora';
-  background: linear-gradient(rgba(72, 161, 184, 0.65), rgba(58, 159, 184, 0.65)), url("../img/bg_main.jpg");
+  background: linear-gradient(rgba(72, 161, 184, 0.65), rgba(81, 202, 233, 0.65)), url("../img/bg_main.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -55,7 +55,7 @@ p {
 .section-heading .section-heading-upper {
   display: block;
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: 200;
   padding-bottom:.5rem;
 
 }
@@ -99,7 +99,7 @@ p {
   text-decoration: underline;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 500px) {
   #encabezado .navbar-nav .nav-item .nav-link {
     font-size: 0.9rem;
   }
